@@ -13,16 +13,34 @@ runtime: null
 command:
   - "/opt/apps/com.brave.brave-browser/files/bin/com.brave.brave-browser"
 
+sources:
+    - kind: file
+      url: https://github.com/brave/brave-browser/releases/download/v1.84.132/brave-browser-1.84.132-linux-arm64.zip
+      digest: 60110d9a35c8761617718c5a4b8c34a9c59bb0bcfe419c845c43795333badc9a
+
 build: |
     ## 环境设置
     set -x
     export PATH=$PATH:/usr/libexec/linglong/builder/helper
     # 设置工作目录
-    SOURCES="linglong/sources"
+    SOURCES="linglong/app-sources"
     # 设置启动二进制文件名称
     BINNAME=${LINGLONG_APPID}
     # 进入工作目录
     cd ${SOURCES}
+
+    # 重命名压缩包
+    mv ../sources/*.zip ../sources/target.zip
+
+    # 删除多余目录
+    rm -rf ${LINGLONG_APPID}
+
+    # 解压压缩包
+    mkdir ${LINGLONG_APPID} && cd ${LINGLONG_APPID} && unzip ../../sources/target.zip
+    # 删除多余文件
+    rm -rf *.png
+    # 退回上一级
+    cd ..
 
     #写入启动脚本
     echo "#!/bin/bash" > bin/${BINNAME}
