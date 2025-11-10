@@ -42,13 +42,12 @@ build: |
     # 退回上一级
     cd ..
 
-    #写入启动脚本
+    # 写入启动脚本
     echo "#!/bin/bash" > bin/${BINNAME}
     echo "exec \"${PREFIX}/${LINGLONG_APPID}/brave\" \"\$@\"" >> bin/${BINNAME}
     chmod -R 755 *
 
-    #进行安装
+    # 进行安装
     cp -a bin $PREFIX
     cp -a ${LINGLONG_APPID} $PREFIX
     cp -a share $PREFIX
-    cp -a libs $PREFIX/lib
