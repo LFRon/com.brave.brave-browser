@@ -1,0 +1,2 @@
+#!/bin/bash
+exec "/opt/apps/com.brave.brave-browser/files/com.brave.brave-browser/brave" "$@"
