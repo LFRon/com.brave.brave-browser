@@ -15,8 +15,8 @@ command:
 
 sources:
     - kind: file
-      url: https://github.com/brave/brave-browser/releases/download/v1.85.110/brave-browser-1.85.110-linux-arm64.zip
-      digest: c1c058a95441b5fbaaac0ba02ce36cf293d04fc91b9620cd354a34781e6048c4
+      url: https://github.com/brave/brave-browser/releases/download/v1.85.111/brave-browser-1.85.111-linux-arm64.zip
+      digest: 570e8110891a5687028902a91f6dedb4fd3a757825e6853014051bb029251035
 
 build: |
     ## 环境设置
