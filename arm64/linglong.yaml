@@ -3,7 +3,7 @@ version: "1"
 package:
   id: com.brave.brave-browser
   name: Brave
-  version: 1.86.139.0
+  version: 1.86.142.0
   kind: app
   description: |
     Brave浏览器是一款以隐私保护为核心的开源浏览器,由JavaScript之父Brendan Eich团队开发,并同时默认屏蔽追踪器与恶意广告
