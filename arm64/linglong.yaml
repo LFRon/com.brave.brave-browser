@@ -3,7 +3,7 @@ version: "1"
 package:
   id: com.brave.brave-browser
   name: Brave
-  version: 1.88.132.0
+  version: 1.89.145.0
   kind: app
   description: |
     Brave浏览器是一款以隐私保护为核心的开源浏览器,由JavaScript之父Brendan Eich团队开发,并同时默认屏蔽追踪器与恶意广告
@@ -15,8 +15,8 @@ command:
 
 sources:
     - kind: file
-      url: https://github.com/brave/brave-browser/releases/download/v1.88.132/brave-browser-1.88.132-linux-arm64.zip
-      digest: a1452e82abcbd549d8b474add492cad530af36f671c6b12d1c182cd4e474891a
+      url: https://github.com/brave/brave-browser/releases/download/v1.89.145/brave-browser-1.89.145-linux-arm64.zip
+      digest: 2fd0da95191eec256ac0318f0b02b2871e31014f242f11c9bb84c6e0a6e806f5
 
 build: |
     ## 环境设置
